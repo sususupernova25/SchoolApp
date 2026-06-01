@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct Student: Identifiable {
+    let id = UUID()
+    var name: String
+    var gpa: Double
+}

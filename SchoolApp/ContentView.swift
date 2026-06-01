@@ -45,6 +45,22 @@ struct ContentView: View {
                             .foregroundColor(.secondary)
                         }
                         .padding(.top, 4)
+                        
+                        Button(action: {
+                            personName = personName.uppercased()
+                        }) {
+                            HStack {
+                                Image(systemName: "speaker.wave.3.fill")
+                                Text("Shout the name")
+                            }
+                            .font(.caption)
+                            .fontWeight(.bold)
+                            .foregroundColor(.blue)
+                            .padding(.vertical, 8)
+                            .frame(maxWidth: .infinity)
+                            .background(Color.blue.opacity(0.1))
+                            .cornerRadius(8)
+                        }
                     }
                     .padding(20)
                     .background(Color.blue.opacity(0.08))
@@ -71,7 +87,6 @@ struct ContentView: View {
                             Text("Счетчик: \(count)")
                                 .font(.headline)
                         }
-                        
                         Button(action: { count += 1 }) {
                             Text("Нажми меня")
                                 .font(.subheadline)
